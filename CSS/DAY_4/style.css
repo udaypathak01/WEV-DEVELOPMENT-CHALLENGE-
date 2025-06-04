@@ -1,0 +1,13 @@
+.box {
+  height: 400px;
+  width: 400px;
+  background-color: pink;
+  /* text-align property  */
+  text-align: center;
+  text-decoration: line-through;
+  text-decoration: underline;
+  text-decoration-style:dotted;
+  text-decoration-color: blueviolet;
+  text-transform: uppercase;
+  line-height: 2;
+}

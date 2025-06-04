@@ -1,0 +1,12 @@
+.box {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(65, 65, 255);
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+            display: inline-block;
+            color: yellow;
+
+        }

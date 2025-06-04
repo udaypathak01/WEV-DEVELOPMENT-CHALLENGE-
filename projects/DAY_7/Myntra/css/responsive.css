@@ -1,0 +1,6 @@
+@media screen and (min-width:1000px) {
+  .sponser_poster a img{
+  height: 250px;
+  width:  100%;
+}
+}
