@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <button class="btn"
+            onclick="cartQuantity++;document.getElementById('cartQuantity').innerText=`your Bag has ${cartQuantity} items` ">
+            Add to Bag
+        </button>
+
+        <button class="btn2"
+            onclick="cartQuantity--;document.getElementById('cartQuantity').innerText=`your Bag has ${cartQuantity} items` ">
+            MOVE TO WISHLIST
+        </button>
+
+        <button class="btn"
+            onclick="cartQuantity+=2;document.getElementById('cartQuantity').innerText=`your Bag has ${cartQuantity} items` ">
+            Add 1+1 sale item
+        </button>
+
+        <h1 id="cartQuantity"></h1>
+        <!--  practice exercise -->
+        <p id="para"></p>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

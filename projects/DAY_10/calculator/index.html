@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator-container">
+        <input type="text" class="screen" readonly>
+        <div class="buttons">
+            <button class="btn" onclick="currDisplay=''
+            document.querySelector('.screen').value = currDisplay;">C</button>
+            <button class="btn" onclick="currDisplay+='1';
+            document.querySelector('.screen').value = currDisplay;">1</button>
+            <button class="btn" onclick="currDisplay+='2';
+            document.querySelector('.screen').value = currDisplay;">2</button>
+            <button class="btn" onclick="currDisplay+='+';
+            document.querySelector('.screen').value = currDisplay;">+</button>
+            <button class="btn" onclick="currDisplay+='3';
+            document.querySelector('.screen').value = currDisplay;">3</button>
+            <button class="btn" onclick="currDisplay+='4';
+            document.querySelector('.screen').value = currDisplay;">4</button>
+            <button class="btn" onclick="currDisplay+='-';
+            document.querySelector('.screen').value = currDisplay;">-</button>
+            <button class="btn" onclick="currDisplay+='5';
+            document.querySelector('.screen').value = currDisplay;">5</button>
+            <button class="btn" onclick="currDisplay+='6';
+            document.querySelector('.screen').value = currDisplay;">6</button>
+            <button class="btn" onclick="currDisplay+='*';
+            document.querySelector('.screen').value = currDisplay;">*</button>
+            <button class="btn" onclick="currDisplay+='7';
+            document.querySelector('.screen').value = currDisplay;">7</button>
+            <button class="btn" onclick="currDisplay+='8';
+            document.querySelector('.screen').value = currDisplay;">8</button>
+            <button class="btn" onclick="currDisplay+='/';
+            document.querySelector('.screen').value = currDisplay;">/</button>
+            
+            <button class="btn" onclick="
+            document.querySelector('.screen').value = eval(currDisplay);">=</button>
+            
+            <button class="btn" onclick="currDisplay+='9';
+            document.querySelector('.screen').value = currDisplay;">9</button>
+            <button class="btn" onclick="currDisplay+='0';
+            document.querySelector('.screen').value = currDisplay;">0</button>
+            <button class="btn" onclick="currDisplay+='.';
+            document.querySelector('.screen').value = currDisplay;">.</button>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
