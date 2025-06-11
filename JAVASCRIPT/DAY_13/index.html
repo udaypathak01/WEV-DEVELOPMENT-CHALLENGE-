@@ -13,12 +13,21 @@
         let product = {
             company: 'mango',
             price: 12,
-            item_name: 't-shirt'
+            item_name: 't-shirt',
+            displayPrice: function () {
+                console.log(`Price of the product is ${this.price}`);
+
+            }
         };
         console.log(product);
         console.log(product.price);
         console.log(product.company);
-        product.company = 'uday';
+        // product.company = 'uday';
+        product.displayPrice();
+ //       // destructure method 
+        let { company } = product;
+        console.log(company);
+        
 
     </script>
 </body>
