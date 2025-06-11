@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cricketGame</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+ 
+<body>
+    <h1>Bat Ball Stump Game</h1>
+    <button class="btn" onclick="
+       computerChoice= computerChoiceFucn();
+       let resultMess= getResult('Bat', computerChoice);
+       showResult('Bat',computerChoice,resultMess);
+        ">Bat</button>
+    <button class="btn" onclick="  
+       computerChoice= computerChoiceFucn();
+       resultMess= getResult('Ball', computerChoice);
+       showResult('Ball',computerChoice,resultMess);
+
+        ">Ball</button>
+    <button class="btn" onclick="
+          computerChoice=  computerChoiceFucn();
+          resultMess= getResult('Stump', computerChoice);
+       showResult('Stump',computerChoice,resultMess);
+
+        ">Stump</button>
+
+    <script src="logic.js"></script>
+</body>
+
+</html>
