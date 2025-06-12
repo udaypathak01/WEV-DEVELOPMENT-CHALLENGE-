@@ -24,10 +24,36 @@
         console.log(product.company);
         // product.company = 'uday';
         product.displayPrice();
- //       // destructure method 
+        //       // destructure method 
         let { company } = product;
         console.log(company);
+
+        // practice exercise 
+        let mynthra = {
+            size: 'M',
+            item_name: 't-shirt',
+            price: 599,
+            discount: '50%',
+            discounted_price: 249,
+            brand: 'Zara',
+            ratings: 4,
+            'delevery-time': 'sameday',
+        }
+        let copyProduct = mynthra;
+        console.log(mynthra);
+        copyProduct.brand = 'addidas';
+        console.log(copyProduct);
+        console.log(mynthra['delevery-time']);
+
+        let message = {
+            msg: 'good job',
+            status: 'complete',
+        }
+        console.log(message);
         
+        let { msg, status } = message;
+        console.log(msg);
+        console.log(status);
 
     </script>
 </body>

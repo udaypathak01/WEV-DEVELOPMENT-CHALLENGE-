@@ -3,6 +3,9 @@ let score = {
   win: 0,
   lost: 0,
   tie: 0,
+  displayScore: function () {
+    return `Won: ${score.win}, Lost:${score.lost}, Tie:${score.tie}`;
+  },
 };
 
 let computerChoice;
@@ -35,6 +38,6 @@ function getResult(userMove, computerMove) {
 }
 function showResult(userMove, computerMove, resultMess) {
   alert(
-    `You have choose ${userMove}. Computer choice is ${computerMove},\n ${resultMess}\n Won: ${score.win}, Lost:${score.lost}, Tie:${score.tie}`
+    `You have choose ${userMove}. Computer choice is ${computerMove},\n ${resultMess}\n ${score.displayScore()}`
   );
 }
