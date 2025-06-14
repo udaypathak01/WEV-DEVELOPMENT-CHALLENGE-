@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cricketGame</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            text-align: center;
-        }
-    </style>
+   
 </head>
 
 <body>
@@ -20,21 +16,27 @@
        computerChoice= computerChoiceFucn();
        let resultMess= getResult('Bat', computerChoice);
        showResult('Bat',computerChoice,resultMess);
-        ">Bat</button>
+        "><img src="/projects/DAY_14/cricketGame/images/bat.png" alt="bat img"></button>
 
     <button class="btn" onclick="  
        computerChoice= computerChoiceFucn();
        resultMess= getResult('Ball', computerChoice);
        showResult('Ball',computerChoice,resultMess);
-        ">Ball</button>
+        "><img src="/projects/DAY_14/cricketGame/images/ball.png" alt="ball img"></button>
 
     <button class="btn" onclick="
           computerChoice=  computerChoiceFucn();
           resultMess= getResult('Stump', computerChoice);
          showResult('Stump',computerChoice,resultMess);
-         ">Stump</button>
-    <br><br>
-    <button class="btn" onclick="
+         "><img src="/projects/DAY_14/cricketGame/images/stump.png" alt="stump img"></button>
+
+
+    <h3 id="User_move"></h3>
+    <h3 id="computer_move"></h3>
+    <h3 id="result"></h3>
+    <h3 id="score"></h3>
+
+    <button class="btn reset" onclick="
     localStorage.clear();
     resetScore();
     ">Reset</button>
