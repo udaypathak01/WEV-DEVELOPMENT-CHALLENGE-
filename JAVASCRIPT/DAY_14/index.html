@@ -30,6 +30,34 @@
         // console.log(newProduct);
 
 
+
+        // localStorage
+        // localStorage.setItem('Name', 'uday pathak');
+        // localStorage.setItem('price', '345');
+        console.log(localStorage.getItem('Name'));
+        console.log(localStorage.getItem('price'));
+
+        let product = {
+            name: 'tshirt',
+            price: 897,
+            rating: {
+                stars: 4.5,
+                noOfReviws: 459,
+            },
+        }
+        // // localStorage me data string ke form me hi store hota hai isliye product object ko string me convert krke localstorage me save kiya hai
+
+        // localStorage.setItem('product', JSON.stringify(product))
+        // console.log(localStorage.getItem('product'));
+
+        // let product2 = JSON.parse(localStorage.getItem('product'));
+        // console.log(product2);
+
+        // for removing only one item in local Storage 
+        localStorage.removeItem('price')
+        // for removing all items in localStorage 
+        localStorage.clear()
+        
     </script>
 </body>
 
