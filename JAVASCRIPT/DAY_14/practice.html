@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+<style>
+    #btn {
+        height: 100px;
+        width: 100px;
+        border: none;
+        border-radius: 20px;
+    }
+
+    .js-odd {
+        background-color: rgb(16, 162, 130);
+    }
+
+    .js-even {
+        background-color: rgb(255, 243, 9);
+    }
+</style>
+
+<body>
+    <h3 id="greeting">
+
+    </h3>
+    <button id="btn" onclick="btn_pres()">0</button>
+
+
+
+    <script>
+
+        let count = localStorage.getItem('count') || 0;
+        function btn_pres() {
+            let btn = document.querySelector('#btn');
+            count++;
+            localStorage.setItem('count', count);
+            updateBtn();
+
+        }
+
+        function greetings(person) {
+            let greet_heading = document.querySelector('#greeting');
+            let date = new Date();
+            let houres = date.getHours();
+            if (houres > 5 && houres < 12) {
+                greet_heading.innerText = `Good morning, ${person}`;
+            } else if (houres > 12 && houres < 16) {
+                greet_heading.innerText = `Good afternoon, ${person}`;
+
+            } else {
+                greet_heading.innerText = `Good night, ${person}`;
+
+            }
+        }
+        greetings('UDAY pathak');
+        function updateBtn() {
+            if (count % 2 == 0) {
+                btn.classList.add('js-even');
+                btn.classList.remove('js-odd');
+            } else {
+                btn.classList.add('js-odd');
+                btn.classList.remove('js-even');
+            }
+            btn.innerText = count;
+        }
+        updateBtn();
+    </script>
+</body>
+
+</html>
