@@ -20,17 +20,26 @@
 // });
 // btn.addEventListener('mousemove',(event)=>{
 //     console.log(event);
-    
+
 // })
 
+// let foods=['mango','graps','apple','banana'];
+// foods.forEach(food=> {
 
-let foods=['mango','graps','apple','banana'];
-foods.forEach(food=> {
-   
-    if (food==='banana') {
-        console.log("banana was found");
-        return;//contineu ki trah work karta hai forEach me
-    }
-    console.log(`visited ${food}`);
-    
+//     if (food==='banana') {
+//         console.log("banana was found");
+//         return;//contineu ki trah work karta hai forEach me
+//     }
+//     console.log(`visited ${food}`);
+
+// });
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let evens = numbers.filter((num, i) => {
+  return num % 2 == 0
+})
+console.log(evens);
+let squres =numbers.map(num=>{
+    return num*num
 });
+console.log(squres);
