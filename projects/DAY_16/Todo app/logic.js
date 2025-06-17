@@ -1,5 +1,5 @@
-let stored = localStorage.getItem("todoItem");
-let todoList = [];
+let stored = localStorage.getItem("todoItem"); //getting string data from local storage
+let todoList = JSON.parse(stored) || []; // if null than use empty array
 displayItems();
 function addTodo() {
   let inputElement = document.querySelector("#todo-input-text");
@@ -8,8 +8,8 @@ function addTodo() {
     item: inputElement.value,
     date: dateElement.value,
   });
-  localStorage.setItem("todoItem", JSON.stringify(todoList));// save array data to local storage
-  
+  localStorage.setItem("todoItem", JSON.stringify(todoList)); // save array data to local storage
+
   inputElement.value = "";
   dateElement.value = "";
   displayItems();
@@ -23,8 +23,13 @@ function displayItems() {
     newHtml += `<div>
     <span>${item}</span>
     <span>${date}</span>
-      <button onclick="todoList.splice(${i},1); displayItems();" class="button-delete">Delete</button>
+      <button onclick="deleteItem(${i})" class="button-delete">Delete</button>
       </div>`;
   }
   containerElement.innerHTML = newHtml;
+}
+function deleteItem(i) {
+  todoList.splice(i, 1);
+  localStorage.setItem("todoItem", JSON.stringify(todoList));//update aray after deleting item
+  displayItems();
 }
