@@ -20,8 +20,20 @@ function loadBagItemObjects() {
 }
 function displayBagItem() {
   let containerElement = document.querySelector(".bag-items-container");
-    containerElement.innerHTML =generateHTML(loadBagItemObjects)
+  let innerHTML = "";
+  bagItemObjects.forEach((bagItem) => {
+    innerHTML += generateHTML(bagItem);
+  });
+  containerElement.innerHTML = innerHTML;
 }
+
+function removeFromBag(itemId) {
+  bagItems = bagItems.filter((bagItemId) => bagItemId != itemId);
+  localStorage.setItem("bagItem", JSON.stringify(bagItems));
+  onLoad();
+ diplsyBagIcon()
+}
+
 function generateHTML(item) {
   return `
 <div class="bag-item-container">
@@ -45,6 +57,6 @@ function generateHTML(item) {
               </div>
             </div>
 
-            <div class="remove-from-cart">X</div>
+            <div class="remove-from-cart" onclick="removeFromBag(${item.id})">X</div>
           </div>`;
 }
