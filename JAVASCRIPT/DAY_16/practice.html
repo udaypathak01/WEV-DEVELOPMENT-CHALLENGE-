@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <style>
+        .size {
+            height: 40px;
+            width: 100px;
+            background-color: yellow;
+            border-radius: 10px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body style="background-color: #3d3c3c ;">
+
+    <script>
+        // task 1 
+        let multiply = (num1, num2) => {
+            return num1 * num2;
+        }
+        console.log(multiply(2, 5));
+        // task 2
+        function runTwice(func) {
+            func();
+            func();
+        }
+        let func = () => {
+            console.log("welcome");
+        }
+        runTwice(func);
+        // task 3 
+        let body = document.querySelector('body');
+        let btn = document.createElement('button');
+        btn.innerText = 'click me';
+        body.appendChild(btn);
+
+        btn.addEventListener('click', () => {
+            setTimeout(() => {
+                btn.classList.add('size');
+                console.log("ram");
+                
+            }, 2000);
+        })
+    </script>
+</body>
+
+</html>
