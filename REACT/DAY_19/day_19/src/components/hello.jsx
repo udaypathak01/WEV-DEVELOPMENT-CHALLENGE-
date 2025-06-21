@@ -1,7 +1,13 @@
-function Hello(){
-    let myName='uday pathak'
-    return <h3>hello this your student {myName}</h3>
+function Hello() {
+  let myName = "Shrivalli";
+  let table = () => {
+   return 2+2;
+  };
+  return (
+    <h3>
+      hello this is dynamic {myName} , funciton call- {table()}
+    </h3>
+  );
 }
-
 
 export default Hello;
