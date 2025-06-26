@@ -1,14 +1,29 @@
 import FoodItems from "./components/FoodItems";
 import ErrorMess from "./components/ErrorMess";
+import { Container } from "./components/Container";
+import FoodInput from "./components/FoodInput";
+import { useState } from "react";
 function App() {
-let foodItems = ["Dal", "Roti", "Chawal", "sabji", "Paneer"];
+  let [foodItems, setfoodItems] = useState([]);
+
+  let handleOnKeyDown = (event) => {
+    if (event.key === "Enter") {
+      let newFoodItem = event.target.value;
+      let newItems = [...foodItems, newFoodItem];
+      setfoodItems(newItems);
+      event.target.value=''
+    }
+  };
 
   return (
-    <>
-      <h1>Fragments</h1>
-      <ErrorMess foodItems={foodItems}></ErrorMess>
+    <Container>
+      <center>
+        <h1>Food Items</h1>
+        <FoodInput handleOnKeyDown={handleOnKeyDown} />
+        <ErrorMess foodItems={foodItems}></ErrorMess>
+      </center>
       <FoodItems foodItems={foodItems}></FoodItems>
-    </>
+    </Container>
   );
 }
 

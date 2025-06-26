@@ -1,4 +1,10 @@
 .list-item{
-    background-color: yellow;
+    background-color: rgb(133, 92, 11);
     border: 2px solid black;
+    color: rgb(255, 255, 255);
+    font-size: 1.25rem;
+}
+button{
+    float: right;
+    font-weight: 700;
 }
