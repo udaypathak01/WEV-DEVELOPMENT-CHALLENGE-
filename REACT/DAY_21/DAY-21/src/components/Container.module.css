@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Container {
+  width: 50%;
+  min-width: 300px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+}
