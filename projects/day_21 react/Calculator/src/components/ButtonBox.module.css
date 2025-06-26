@@ -1,0 +1,17 @@
+.Cal_btn_box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  height: 50px;
+  width: 50px;
+  font-size: large;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
