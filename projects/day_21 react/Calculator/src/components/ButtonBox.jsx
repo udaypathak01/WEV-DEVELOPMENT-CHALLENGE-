@@ -1,5 +1,5 @@
 import style from "./ButtonBox.module.css";
-export function ButtonBox() {
+export function ButtonBox({handleOnBtnClick}) {
   let BtnArr = [
     "C",
     "1",
@@ -21,7 +21,7 @@ export function ButtonBox() {
   return (
     <div className={style.Cal_btn_box}>
       {BtnArr.map((btnName) => (
-        <button className={style.button}>{btnName}</button>
+        <button key={btnName} className={style.button} onClick={handleOnBtnClick}>{btnName}</button>
       ))}
     </div>
   );
